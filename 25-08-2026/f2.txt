@@ -1,0 +1,5 @@
+Yo Whats up 
+this is a simulation file 
+that is going
+to be used for the implementation 
+of the file handling ops in python
