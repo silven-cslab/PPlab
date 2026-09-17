@@ -39,14 +39,14 @@ acc2.deposit(100)
 
 class SavingsBankAccount(BankAccount):
     def __init__(self, no, name, bal, rate):
-        super().__init__(self, no, name, bal)
+        super().__init__(no, name, bal)
         self.interestRate = rate
 
 
 
 class CurrentBankAccount(BankAccount):
     def __init__(self, no, name, bal, overDraftLimit):
-        super().__init__(self, no, name, bal)
+        super().__init__(no, name, bal)
         self.overDraftLimit = overDraftLimit
 
     def withdraw(self, amount):
@@ -63,11 +63,11 @@ class CurrentBankAccount(BankAccount):
 
 class FixedDepositAccount(BankAccount):
     def __init__(self, no, name, bal, Tenure):
-        super().__init__(self, no, name, bal)
+        super().__init__(no, name, bal)
         self.Tenure = Tenure
 
     def withdraw(self, TimePeriod, amount):
-        if TimePeriod < Tenure:
+        if TimePeriod < self.Tenure:
             print("\nTenure of your hasn't completed. Unable to withdraw.")
         else:
             self.balance -= amount
